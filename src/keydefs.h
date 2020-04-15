@@ -116,7 +116,7 @@
 
 // Source Control Menu
 # define JJ_XcodeCommit LALT(LGUI(Key_C)) // PGUP
-# define JJ_XcodePull LCTRL(LGUI(Key_X)) // PGDN
+# define JJ_XcodePull LALT(LGUI(Key_X)) // PGDN
 
 // Transformation Menu
 # define JJ_XcodeLowercaseWord LCTRL(LALT(LSHIFT(LGUI(Key_L)))) // ' (custom)
