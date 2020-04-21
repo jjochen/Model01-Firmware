@@ -5,6 +5,7 @@
 #include "Macros.h"
 #include <Kaleidoscope.h>
 #include <Kaleidoscope-Macros.h>
+#include <Kaleidoscope-LEDControl.h>
 
 
 namespace jj {
@@ -42,6 +43,15 @@ static void anyKeyMacro(uint8_t keyState) {
     Kaleidoscope.hid().keyboard().pressKey(lastKey, toggledOn);
 }
 
+static void lock(uint8_t keyState) {
+  if (keyToggledOn(keyState)) {
+    // ::Macros.play(MACRO(Tr(Consumer_Pause)));
+    // ::Macros.play(MACRO(Tr(Consumer_Mute)));
+    ::LEDOff.activate();
+    ::Macros.play(MACRO(Tr(LCTRL(LGUI(Key_Q)))));
+  }
+}
+
 static void xcodeSelectToMark(uint8_t keyState) {
   if (keyToggledOn(keyState)) {
     ::Macros.play(MACRO(Tr(LCTRL(Key_X)), Tr(LCTRL(Key_M))));
@@ -72,6 +82,10 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
   case MACRO_ANY:
     jj::Macros::anyKeyMacro(keyState);
+    break;
+
+  case MACRO_LOCK:
+    jj::Macros::lock(keyState);
     break;
 
   case MACRO_XCODE_SELECT_TO_MARK:

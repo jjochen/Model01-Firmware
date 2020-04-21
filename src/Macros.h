@@ -4,6 +4,7 @@
 
 enum { MACRO_VERSION_INFO,
        MACRO_ANY,
+       MACRO_LOCK,
        MACRO_XCODE_SELECT_TO_MARK,
        MACRO_XCODE_SWAP_WITH_MARK,
      };
