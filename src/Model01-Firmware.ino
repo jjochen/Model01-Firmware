@@ -53,10 +53,11 @@ KALEIDOSCOPE_INIT_PLUGINS(
   LEDOff,
   LEDToggle,
   ActiveModColorEffect,
-  jj::LEDControl::solidBrightRed,
   jj::LEDControl::solidRed,
-  jj::LEDControl::solidIndigo,
+  jj::LEDControl::solidPaleRed,
   LEDBreatheEffect,
+  jj::LEDControl::solidBrightRed,
+  jj::LEDControl::solidIndigo,
   jj::LEDControl::solidPaleWhite,
   LEDDigitalRainEffect,
 #if KALEIDOSCOPE_INCLUDE_MORE_LED_EFFECTS

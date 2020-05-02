@@ -34,6 +34,8 @@ void configure(void) {
 
   ::ActiveModColorEffect.highlight_color = CRGB(0x00, 0xff, 0xff);
   ::ActiveModColorEffect.sticky_color = CRGB(0xff, 0x00, 0xff);
+  
+  ::LEDBreatheEffect.hue = 0;
 
 #if KALEIDOSCOPE_INCLUDE_MORE_LED_EFFECTS
   ::AlphaSquare.color = CRGB(255, 0, 0);
