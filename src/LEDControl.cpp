@@ -11,7 +11,7 @@
 #include <Kaleidoscope-LEDEffect-BootGreeting.h>
 #include <Kaleidoscope-LEDEffect-Breathe.h>
 #include <Kaleidoscope-LEDEffect-Chase.h>
-#include <Kaleidoscope-LEDEffect-DigitalRain.h>
+//#include <Kaleidoscope-LEDEffect-DigitalRain.h>
 #include <Kaleidoscope-LEDEffect-Rainbow.h>
 #include <Kaleidoscope-LEDEffect-SolidColor.h>
 

@@ -21,7 +21,7 @@
 #include <Kaleidoscope-LEDEffect-BootGreeting.h>
 #include <Kaleidoscope-LEDEffect-Breathe.h>
 #include <Kaleidoscope-LEDEffect-Chase.h>
-#include <Kaleidoscope-LEDEffect-DigitalRain.h>
+//#include <Kaleidoscope-LEDEffect-DigitalRain.h>
 #include <Kaleidoscope-LEDEffect-Rainbow.h>
 #include <Kaleidoscope-LEDEffect-SolidColor.h>
 #include <Kaleidoscope-HardwareTestMode.h>
@@ -59,7 +59,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   jj::LEDControl::solidBrightRed,
   jj::LEDControl::solidIndigo,
   jj::LEDControl::solidPaleWhite,
-  LEDDigitalRainEffect,
+// LEDDigitalRainEffect,
 #if KALEIDOSCOPE_INCLUDE_MORE_LED_EFFECTS
   LEDRainbowEffect,
   LEDRainbowWaveEffect,
