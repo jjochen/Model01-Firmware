@@ -11,6 +11,13 @@
 #include "Leader.h"
 
 
+#if KALEIDOSCOPE_INCLUDE_XCODE
+# define JJ_Xcode OSL(XCODE)
+#else
+# define JJ_Xcode ___
+#endif
+
+
 // *INDENT-OFF*
 
 KEYMAPS(
@@ -38,10 +45,10 @@ KEYMAPS(
    ___, Key_Delete, ___, ___,
    ___,
 
-   ___,                     Key_F6,                   Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_Eszett,
-   Consumer_PlaySlashPause, ___,                      Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_UUmlaut,
-                            Key_LeftArrow,            Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Key_OUmlaut,      Key_AUmlaut,
-   ___,                     TD(TAP_DANCE_NEXT_TRACK), Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             ___,              ___,
+   ___,                     Key_F6,               Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_Eszett,
+   Consumer_PlaySlashPause, ___,                  Key_LeftCurlyBracket,     Key_RightCurlyBracket,    Key_LeftBracket, Key_RightBracket, Key_UUmlaut,
+                            Key_LeftArrow,        Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  Key_OUmlaut,      Key_AUmlaut,
+   ___,                     JJ_NextPreviousTrack, Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             ___,              ___,
    ___, ___, Key_Enter, ___,
    ___),
 

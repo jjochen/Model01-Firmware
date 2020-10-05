@@ -10,14 +10,10 @@
 #pragma once
 
 #include "config.h"
-#include "layers.h"
 #include "Macros.h"
-#include "TapDance.h"
 
 
 #if KALEIDOSCOPE_INCLUDE_XCODE
-// Xcode Layer
-# define JJ_Xcode OSL(XCODE)
 
 // File Menu
 # define JJ_XcodeNewEditor LCTRL(LGUI(Key_T)) // T
@@ -36,7 +32,6 @@
 # define JJ_XcodeCopyQualifiedSymbolName LCTRL(LALT(LSHIFT(LGUI(Key_C)))) // 3
 # define JJ_XcodeShowSpelling LGUI(LSHIFT(Key_Semicolon)) // P
 # define JJ_XcodeCheckSpelling LGUI(Key_Semicolon) // ;
-# define JJ_XcodeCopyOrCut TD(TAP_DANCE_XCODE_COPY_OR_CUT)
 
 // View Menu
 # define JJ_XcodeFocusEditor LCTRL(LSHIFT(LGUI(Key_Enter))) // BUTTERFLY
@@ -59,8 +54,6 @@
 # define JJ_XcodeFindAndReplaceInFile LGUI(LALT(Key_F))
 # define JJ_XcodeFindNextInFile LGUI(Key_G)
 # define JJ_XcodeFindPreviousInFile LSHIFT(LGUI(Key_G))
-# define JJ_XcodeFind TD(TAP_DANCE_XCODE_FIND)
-# define JJ_XcodeFindAndReplace TD(TAP_DANCE_XCODE_FIND_AND_REPLACE)
 
 // Navigate Menu
 # define JJ_XcodeRevealInProjectNavigator LSHIFT(LGUI(Key_J)) // 6
@@ -133,7 +126,5 @@
 // Selection
 # define JJ_XcodeSelectLine LCTRL(LSHIFT(LGUI(Key_L))) // S (custom)
 
-#else
-# define JJ_Xcode ___
 #endif
 
