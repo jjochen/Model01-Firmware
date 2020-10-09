@@ -45,10 +45,10 @@ KEYMAPS(
       ,___          ,___   ,___   ,___   ,___        ,___
       ,___          ,___   ,___   ,___   ,Key_Delete ,___
 
-           ,Key_6                ,Key_7                 ,Key_8           ,Key_9            ,Key_0
-           ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_LeftBracket ,Key_RightBracket ,Key_Quote
-      ,___ ,___                  ,___                   ,___             ,___              ,Key_Equals
-      ,___ ,___                  ,___                   ,___             ,___              ,___
+           ,Key_6         ,Key_7         ,Key_8       ,Key_9          ,Key_0
+           ,Key_LeftArrow ,Key_DownArrow ,Key_UpArrow ,Key_RightArrow ,Key_Quote
+      ,___ ,___           ,___           ,___         ,___            ,Key_Equals
+      ,___ ,___           ,___           ,___         ,___            ,___
    ),
 
   [BUTTERFLY] = KEYMAP_STACKED
@@ -58,10 +58,10 @@ KEYMAPS(
       ,___                  ,___           ,___           ,___           ,___           ,___
       ,___                  ,___           ,___           ,___           ,Key_Delete    ,___
 
-           ,LSHIFT(Key_6) ,LSHIFT(Key_7) ,LSHIFT(Key_8) ,LSHIFT(Key_9)  ,LSHIFT(Key_0)
-           ,Key_LeftArrow ,Key_DownArrow ,Key_UpArrow   ,Key_RightArrow ,LSHIFT(Key_Quote)
-      ,___ ,___           ,___           ,___           ,___            ,LSHIFT(Key_Equals)
-      ,___ ,___           ,___           ,___           ,___            ,___
+           ,LSHIFT(Key_6)        ,LSHIFT(Key_7)         ,LSHIFT(Key_8)   ,LSHIFT(Key_9)    ,LSHIFT(Key_0)
+           ,Key_LeftCurlyBracket ,Key_RightCurlyBracket ,Key_LeftBracket ,Key_RightBracket ,LSHIFT(Key_Quote)
+      ,___ ,___                  ,___                   ,___             ,___              ,LSHIFT(Key_Equals)
+      ,___ ,___                  ,___                   ,___             ,___              ,___
    )
 
 #if ORIGINAL
