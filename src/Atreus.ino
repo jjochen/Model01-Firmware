@@ -3,7 +3,6 @@
 #include "config.h"
 
 #include <Kaleidoscope.h>
-#include <Kaleidoscope-Leader.h>
 #include <Kaleidoscope-Macros.h>
 #include <Kaleidoscope-TapDance.h>
 #include <Kaleidoscope-OneShot.h>
@@ -13,7 +12,6 @@
 
 #include "Macros.h"
 #include "TapDance.h"
-#include "Leader.h"
 #include "OneShot.h"
 
 #include "keydefs.h"
@@ -24,7 +22,7 @@ enum {
   FUN,
   UPPER,
   EDIT,
-  XCODE,
+  SHORTCUTS,
 };
 
 /* *INDENT-OFF* */
@@ -36,10 +34,10 @@ KEYMAPS(
       ,Key_Z   ,Key_X            ,Key_C        ,Key_V        ,Key_B         ,Key_Tab
       ,Key_Esc ,OSM(LeftControl) ,OSM(LeftAlt) ,OSM(LeftGui) ,Key_Backspace ,OSM(LeftShift)
 
-                   ,Key_Y     ,Key_U       ,Key_I      ,Key_O      ,Key_P
-                   ,Key_H     ,Key_J       ,Key_K      ,Key_L      ,Key_Semicolon
-       ,Key_Enter  ,Key_N     ,Key_M       ,Key_Comma  ,Key_Period ,Key_Slash
-       ,OSL(UPPER) ,Key_Space ,OSL(FUN)    ,LEAD(MAIN) ,Key_Minus  ,Key_Backslash
+                   ,Key_Y     ,Key_U       ,Key_I          ,Key_O      ,Key_P
+                   ,Key_H     ,Key_J       ,Key_K          ,Key_L      ,Key_Semicolon
+       ,Key_Enter  ,Key_N     ,Key_M       ,Key_Comma      ,Key_Period ,Key_Slash
+       ,OSL(UPPER) ,Key_Space ,OSL(FUN)    ,OSL(SHORTCUTS) ,Key_Minus  ,Key_Backslash
   ),
 
   [FUN] = KEYMAP_STACKED
@@ -70,9 +68,9 @@ KEYMAPS(
 
   [EDIT] = KEYMAP_STACKED
   (
-       Key_Insert          ,Key_Home      ,Key_UpArrow   ,Key_End        ,Key_Tab
-      ,___                 ,Key_LeftArrow ,Key_DownArrow ,Key_RightArrow ,___
-      ,Key_Z               ,Key_X         ,Key_C         ,Key_V          ,Key_Space     ,Key_Enter
+       Key_Insert          ,Key_Home      ,Key_UpArrow   ,Key_End        ,___
+      ,___                 ,Key_LeftArrow ,Key_DownArrow ,Key_RightArrow ,Key_Enter
+      ,Key_Z               ,Key_X         ,Key_C         ,Key_V          ,Key_Space     ,Key_Tab
       ,MoveToLayer(QWERTY) ,___           ,___           ,___            ,Key_Backspace ,___
 
            ,___ ,___ ,___ ,___ ,___
@@ -81,7 +79,7 @@ KEYMAPS(
       ,___ ,___ ,___ ,___ ,___ ,___
    ),
 
-  [XCODE] = KEYMAP_STACKED
+  [SHORTCUTS] = KEYMAP_STACKED
   (
        JJ_XcodeCloseOtherEditors ,JJ_XcodeCloseEditor ,JJ_XcodeEditAllInScope   ,JJ_XcodeFindAndReplaceInWorkspace ,JJ_XcodeNewEditor
       ,JJ_XcodeShowCodeActions   ,JJ_XcodeSelectLine  ,JJ_XcodeJumpToDefinition ,JJ_XcodeFindInWorkspace           ,JJ_XcodeFindNextInWorkspace
@@ -91,7 +89,7 @@ KEYMAPS(
                            ,JJ_XcodeRevealInProjectNavigator ,JJ_XcodeRevealInDebugNavigator            ,XXX                           ,JJ_XcodeOpenQuickly  ,JJ_XcodeUppercaseWord
                            ,JJ_XcodeGoBack                   ,JJ_XcodeJumpToNextCounterpartInNextEditor ,JJ_XcodeJumpToNextCounterpart ,JJ_XcodeGoForward    ,JJ_XcodeCapitalizeWord
       ,JJ_XcodeAssistant   ,JJ_XcodeRefactorRename           ,JJ_XcodeRefactorExtractToMethod           ,JJ_XcodeMoveLineUp            ,JJ_XcodeMoveLineDown ,JJ_XcodeLowercaseWord
-      ,JJ_XcodeFocusEditor ,___                              ,___                                       ,___                           ,___                  ,JJ_XcodeJumpToNextChange
+      ,LALT(LSHIFT(Key_M)) ,___                              ,Key_NonUsBackslashAndPipe                 ,___                           ,___                  ,JJ_XcodeJumpToNextChange
    ),
 
 #if ORIGINAL
@@ -146,7 +144,6 @@ KALEIDOSCOPE_INIT_PLUGINS(
   MouseKeys,
   Macros,
   TapDance,
-  Leader,
   German
 );
 
@@ -155,7 +152,6 @@ void setup() {
 
   jj::Macros::configure();
   jj::TapDance::configure();
-  jj::Leader::configure();
   jj::OneShot::configure();
 }
 
