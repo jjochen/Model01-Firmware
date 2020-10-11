@@ -42,10 +42,10 @@ KEYMAPS(
 
   [FUN] = KEYMAP_STACKED
   (
-       Key_1        ,Key_2 ,Key_3 ,Key_4 ,Key_5
-      ,Key_Backtick ,___   ,___   ,___   ,Key_PageUp
-      ,___          ,___   ,___   ,___   ,Key_PageDown ,___
-      ,___          ,___   ,___   ,___   ,Key_Delete   ,___
+       Key_1        ,Key_2       ,Key_3       ,Key_4       ,Key_5
+      ,Key_Backtick ,Key_Eszett  ,___         ,___         ,Key_PageUp
+      ,___          ,Key_AUmlaut ,Key_OUmlaut ,Key_UUmlaut ,Key_PageDown ,___
+      ,___          ,___         ,___         ,___         ,Key_Delete   ,___
 
            ,Key_6         ,Key_7         ,Key_8       ,Key_9          ,Key_0
            ,Key_LeftArrow ,Key_DownArrow ,Key_UpArrow ,Key_RightArrow ,Key_Quote
