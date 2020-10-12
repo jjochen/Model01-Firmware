@@ -1,19 +1,16 @@
 // -*- mode: c++ -*-
 
-#include "config.h"
-
 #include <Kaleidoscope.h>
 #include <Kaleidoscope-Macros.h>
+#include <Kaleidoscope-Config-Macros.h>
 #include <Kaleidoscope-TapDance.h>
+#include <Kaleidoscope-Config-TapDance.h>
 #include <Kaleidoscope-OneShot.h>
 #include <Kaleidoscope-Escape-OneShot.h>
+#include <Kaleidoscope-Config-OneShot.h>
 #include <Kaleidoscope-MouseKeys.h>
 #include <Kaleidoscope-LangPack-German.h>
 #include <Kaleidoscope-Xcode-Shortcuts.h>
-
-#include "Macros.h"
-#include "TapDance.h"
-#include "OneShot.h"
 
 
 
