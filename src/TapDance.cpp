@@ -3,8 +3,7 @@
 
 #include "TapDance.h"
 #include <Kaleidoscope-TapDance.h>
-
-#include "keydefs.h"
+#include <Kaleidoscope-Xcode-Shortcuts.h>
 
 namespace jj {
 namespace TapDance {
@@ -35,11 +34,11 @@ void tapDanceAction(uint8_t tap_dance_index, KeyAddr key_addr, uint8_t tap_count
     return tapDanceActionKeys(tap_count, tap_dance_action, Consumer_ScanNextTrack, Consumer_ScanPreviousTrack);
 #if KALEIDOSCOPE_INCLUDE_XCODE
   case TAP_DANCE_XCODE_FIND:
-    return tapDanceActionKeys(tap_count, tap_dance_action, JJ_XcodeFindInFile, JJ_XcodeFindInWorkspace);
+    return tapDanceActionKeys(tap_count, tap_dance_action, Key_XcodeFindInFile, Key_XcodeFindInWorkspace);
   case TAP_DANCE_XCODE_FIND_AND_REPLACE:
-    return tapDanceActionKeys(tap_count, tap_dance_action, JJ_XcodeFindAndReplaceInFile, JJ_XcodeFindAndReplaceInWorkspace);
+    return tapDanceActionKeys(tap_count, tap_dance_action, Key_XcodeFindAndReplaceInFile, Key_XcodeFindAndReplaceInWorkspace);
   case TAP_DANCE_XCODE_COPY_OR_CUT:
-    return tapDanceActionKeys(tap_count, tap_dance_action, JJ_XcodeCopy, JJ_XcodeCut);
+    return tapDanceActionKeys(tap_count, tap_dance_action, Key_XcodeCopy, Key_XcodeCut);
 #endif
   }
 }

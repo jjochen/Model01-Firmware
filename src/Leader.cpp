@@ -1,11 +1,11 @@
 // -*- mode: c++ -*-
 
 #include "config.h"
-#include "keydefs.h"
 
 #include "Leader.h"
 #include <Kaleidoscope-Leader.h>
 #include <Kaleidoscope-Macros.h>
+#include <Kaleidoscope-Xcode-Shortcuts.h>
 
 namespace jj {
 namespace Leader {

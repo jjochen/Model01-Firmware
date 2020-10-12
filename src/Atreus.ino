@@ -9,12 +9,12 @@
 #include <Kaleidoscope-Escape-OneShot.h>
 #include <Kaleidoscope-MouseKeys.h>
 #include <Kaleidoscope-LangPack-German.h>
+#include <Kaleidoscope-Xcode-Shortcuts.h>
 
 #include "Macros.h"
 #include "TapDance.h"
 #include "OneShot.h"
 
-#include "keydefs.h"
 
 
 enum {
@@ -81,31 +81,31 @@ KEYMAPS(
 
   [SHORTCUTS] = KEYMAP_STACKED
   (
-       JJ_XcodeCloseOtherEditors ,JJ_XcodeCloseEditor ,JJ_XcodeEditAllInScope   ,JJ_XcodeFindAndReplaceInWorkspace ,JJ_XcodeNewEditor
-      ,JJ_XcodeShowCodeActions   ,JJ_XcodeSelectLine  ,JJ_XcodeJumpToDefinition ,JJ_XcodeFindInWorkspace           ,JJ_XcodeFindNextInWorkspace
-      ,XXX                       ,XXX                 ,JJ_XcodeActivateConsole  ,JJ_XcodeRefactorExtractToVariable ,JJ_XcodeNewEditorBelow      ,___
-      ,___                       ,___                 ,___                      ,___                               ,___                         ,___
+       Key_XcodeCloseOtherEditors ,Key_XcodeCloseEditor ,Key_XcodeEditAllInScope   ,Key_XcodeFindAndReplaceInWorkspace ,Key_XcodeNewEditor
+      ,Key_XcodeShowCodeActions   ,Key_XcodeSelectLine  ,Key_XcodeJumpToDefinition ,Key_XcodeFindInWorkspace           ,Key_XcodeFindNextInWorkspace
+      ,XXX                        ,XXX                  ,Key_XcodeActivateConsole  ,Key_XcodeRefactorExtractToVariable ,Key_XcodeNewEditorBelow      ,___
+      ,___                        ,___                  ,___                       ,___                                ,___                          ,___
 
-                           ,JJ_XcodeRevealInProjectNavigator ,JJ_XcodeRevealInDebugNavigator            ,XXX                           ,JJ_XcodeOpenQuickly  ,JJ_XcodeUppercaseWord
-                           ,JJ_XcodeGoBack                   ,JJ_XcodeJumpToNextCounterpartInNextEditor ,JJ_XcodeJumpToNextCounterpart ,JJ_XcodeGoForward    ,JJ_XcodeCapitalizeWord
-      ,JJ_XcodeAssistant   ,JJ_XcodeRefactorRename           ,JJ_XcodeRefactorExtractToMethod           ,JJ_XcodeMoveLineUp            ,JJ_XcodeMoveLineDown ,JJ_XcodeLowercaseWord
-      ,LALT(LSHIFT(Key_M)) ,___                              ,Key_NonUsBackslashAndPipe                 ,___                           ,___                  ,JJ_XcodeJumpToNextChange
+                           ,Key_XcodeRevealInProjectNavigator ,Key_XcodeRevealInDebugNavigator            ,XXX                            ,Key_XcodeOpenQuickly  ,Key_XcodeUppercaseWord
+                           ,Key_XcodeGoBack                   ,Key_XcodeJumpToNextCounterpartInNextEditor ,Key_XcodeJumpToNextCounterpart ,Key_XcodeGoForward    ,Key_XcodeCapitalizeWord
+      ,Key_XcodeAssistant  ,Key_XcodeRefactorRename           ,Key_XcodeRefactorExtractToMethod           ,Key_XcodeMoveLineUp            ,Key_XcodeMoveLineDown ,Key_XcodeLowercaseWord
+      ,LALT(LSHIFT(Key_M)) ,___                               ,Key_NonUsBackslashAndPipe                  ,___                            ,___                   ,Key_XcodeJumpToNextChange
    ),
 
 #if ORIGINAL
-  
+
   [XCODE] =  KEYMAP_STACKED
-  (XXX,            JJ_XcodeShowRelatedItems,  JJ_XcodeCopySymbolName, JJ_XcodeCopyQualifiedSymbolName, JJ_XcodeFindCallHierarchy,         JJ_XcodeFindSelectedSymbolInWorkspace, JJ_XcodeMoveFocusToNextArea,
-   XXX,            JJ_XcodeCloseOtherEditors, JJ_XcodeCloseEditor,    JJ_XcodeEditAllInScope,          JJ_XcodeFindAndReplaceInWorkspace, JJ_XcodeNewEditor,                     JJ_XcodeMoveFocusToNextEditor,
-   JJ_XcodeCommit, JJ_XcodeShowCodeActions,   JJ_XcodeSelectLine,     JJ_XcodeJumpToDefinition,        JJ_XcodeFindInWorkspace,           JJ_XcodeFindNextInWorkspace,
-   JJ_XcodePull,   XXX,                       XXX,                    JJ_XcodeActivateConsole,         JJ_XcodeRefactorExtractToVariable, JJ_XcodeNewEditorBelow,                XXX,
+  (XXX,            Key_XcodeShowRelatedItems,  Key_XcodeCopySymbolName, Key_XcodeCopyQualifiedSymbolName, Key_XcodeFindCallHierarchy,         Key_XcodeFindSelectedSymbolInWorkspace, Key_XcodeMoveFocusToNextArea,
+   XXX,            Key_XcodeCloseOtherEditors, Key_XcodeCloseEditor,    Key_XcodeEditAllInScope,          Key_XcodeFindAndReplaceInWorkspace, Key_XcodeNewEditor,                     Key_XcodeMoveFocusToNextEditor,
+   Key_XcodeCommit, Key_XcodeShowCodeActions,   Key_XcodeSelectLine,     Key_XcodeJumpToDefinition,        Key_XcodeFindInWorkspace,           Key_XcodeFindNextInWorkspace,
+   Key_XcodePull,   XXX,                       XXX,                    Key_XcodeActivateConsole,         Key_XcodeRefactorExtractToVariable, Key_XcodeNewEditorBelow,                XXX,
    ___, ___, ___, ___,
    ___,
 
-   ___,                 JJ_XcodeRevealInProjectNavigator, JJ_XcodeRevealInDebugNavigator,            XXX,                           XXX,                  JJ_XcodeShowLibrary,      JJ_XcodeUppercaseWord,
-   JJ_XcodeAssistant,   JJ_XcodePauseContinue,            JJ_XcodeContinueToCurrentLine,             XXX,                           JJ_XcodeOpenQuickly,  JJ_XcodeShowSpelling,     JJ_XcodeCapitalizeWord,
-                        JJ_XcodeGoBack,                   JJ_XcodeJumpToNextCounterpartInNextEditor, JJ_XcodeJumpToNextCounterpart, JJ_XcodeGoForward,    JJ_XcodeCheckSpelling,    JJ_XcodeLowercaseWord,
-   JJ_XcodeFocusEditor, JJ_XcodeRefactorRename,           JJ_XcodeRefactorExtractToMethod,           JJ_XcodeMoveLineUp,            JJ_XcodeMoveLineDown, JJ_XcodeCommentSelection, JJ_XcodeJumpToNextChange,
+   ___,                 Key_XcodeRevealInProjectNavigator, Key_XcodeRevealInDebugNavigator,            XXX,                           XXX,                  Key_XcodeShowLibrary,      Key_XcodeUppercaseWord,
+   Key_XcodeAssistant,   Key_XcodePauseContinue,            Key_XcodeContinueToCurrentLine,             XXX,                           Key_XcodeOpenQuickly,  Key_XcodeShowSpelling,     Key_XcodeCapitalizeWord,
+                        Key_XcodeGoBack,                   Key_XcodeJumpToNextCounterpartInNextEditor, Key_XcodeJumpToNextCounterpart, Key_XcodeGoForward,    Key_XcodeCheckSpelling,    Key_XcodeLowercaseWord,
+   Key_XcodeFocusEditor, Key_XcodeRefactorRename,           Key_XcodeRefactorExtractToMethod,           Key_XcodeMoveLineUp,            Key_XcodeMoveLineDown, Key_XcodeCommentSelection, Key_XcodeJumpToNextChange,
    ___, ___, ___, ___,
    ___),
 
